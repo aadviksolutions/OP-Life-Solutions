@@ -1,0 +1,230 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AdminUser {
+  id           String        @id @default(cuid())
+  username     String        @unique
+  email        String        @unique
+  passwordHash String
+  name         String
+  role         String        @default("SUPER_ADMIN") // SUPER_ADMIN, ADVISOR, STAFF
+  phone        String?
+  avatarUrl    String?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  activityLogs ActivityLog[]
+}
+
+model Customer {
+  id              String           @id @default(cuid())
+  customerId      String           @unique // e.g. OPS-CUST-1001
+  name            String
+  mobile          String           // Indexed for lookup
+  alternateMobile String?
+  email           String?
+  address         String?
+  city            String?          @default("Raipur")
+  state           String?          @default("Chhattisgarh")
+  pincode         String?
+  dob             DateTime?
+  notes           String?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  policies        Policy[]
+  documents       PolicyDocument[]
+  reminders       Reminder[]
+  reminderLogs    ReminderHistory[]
+  enquiries       Enquiry[]
+
+  @@index([mobile])
+  @@index([name])
+}
+
+model Policy {
+  id               String           @id @default(cuid())
+  policyId         String           @unique // e.g. OPS-POL-2001
+  customerId       String
+  customer         Customer         @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  
+  policyType       String           // MOTOR, HEALTH, LIFE, TRAVEL, HOME, BUSINESS
+  policyNumber     String           @unique // e.g. HDFC-MOT-889921
+  insuranceCompany String           // Star Health, HDFC ERGO, ICICI Lombard, LIC, Tata AIG, Care Health, Bajaj Allianz, New India Assurance
+  
+  purchaseDate     DateTime
+  startDate        DateTime
+  expiryDate       DateTime         // Indexed for expiry tracking
+  premiumAmount    Float
+  sumInsured       Float
+  vehicleNumber    String?          // For motor insurance (e.g. CG 04 MX 8899)
+  insuredAsset     String?          // For home/property or business
+  
+  policyStatus     String           @default("ACTIVE") // ACTIVE, EXPIRING_SOON, EXPIRED, CANCELLED, PENDING
+  renewalDate      DateTime?
+  agentAdvisor     String?          @default("Om Prakash Sahu")
+  notes            String?
+  
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  documents        PolicyDocument[]
+  reminders        Reminder[]
+  reminderLogs     ReminderHistory[]
+
+  @@index([customerId])
+  @@index([policyNumber])
+  @@index([expiryDate])
+  @@index([policyStatus])
+  @@index([policyType])
+}
+
+model InsuranceCompany {
+  id           String   @id @default(cuid())
+  name         String   @unique
+  code         String   @unique
+  logoUrl      String?
+  contactPhone String?
+  contactEmail String?
+  website      String?
+  active       Boolean  @default(true)
+  createdAt    DateTime @default(now())
+}
+
+model PolicyDocument {
+  id           String   @id @default(cuid())
+  policyId     String?
+  policy       Policy?  @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  customerId   String
+  customer     Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  
+  title        String
+  documentType String   @default("POLICY_PDF") // POLICY_PDF, PROPOSAL_FORM, RC_COPY, MEDICAL_REPORT, OTHER
+  fileUrl      String
+  fileName     String
+  fileSize     Int?     // bytes
+  mimeType     String?  @default("application/pdf")
+  uploadedAt   DateTime @default(now())
+
+  @@index([policyId])
+  @@index([customerId])
+}
+
+model Reminder {
+  id            String            @id @default(cuid())
+  policyId      String
+  policy        Policy            @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  customerId    String
+  customer      Customer          @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  
+  reminderType  String            // EXPIRY_30, EXPIRY_15, EXPIRY_7, EXPIRY_1, EXPIRED, CUSTOM
+  scheduledDate DateTime
+  channel       String            @default("WHATSAPP") // WHATSAPP, SMS, EMAIL
+  status        String            @default("PENDING")  // PENDING, SENT, FAILED, CANCELLED
+  sentAt        DateTime?
+  notes         String?
+  createdAt     DateTime          @default(now())
+  updatedAt     DateTime          @updatedAt
+
+  history       ReminderHistory[]
+
+  @@index([policyId])
+  @@index([scheduledDate])
+  @@index([status])
+}
+
+model ReminderHistory {
+  id           String    @id @default(cuid())
+  reminderId   String?
+  reminder     Reminder? @relation(fields: [reminderId], references: [id], onDelete: SetNull)
+  policyId     String
+  policy       Policy    @relation(fields: [policyId], references: [id], onDelete: Cascade)
+  customerId   String
+  customer     Customer  @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  
+  channel      String    // WHATSAPP, SMS, EMAIL
+  recipient    String
+  messageBody  String
+  status       String    @default("SENT") // SENT, FAILED, DELIVERED
+  errorDetails String?
+  sentAt       DateTime  @default(now())
+
+  @@index([policyId])
+  @@index([customerId])
+}
+
+model Enquiry {
+  id            String    @id @default(cuid())
+  customerId    String?
+  customer      Customer? @relation(fields: [customerId], references: [id], onDelete: SetNull)
+  name          String
+  mobile        String
+  email         String?
+  insuranceType String    // Motor, Health, Life, Travel, Home, Business, General
+  message       String
+  status        String    @default("NEW") // NEW, CONTACTED, IN_PROGRESS, CLOSED
+  notes         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([mobile])
+  @@index([status])
+}
+
+model AdminSettings {
+  id                 String   @id @default("default-settings")
+  companyName        String   @default("Om Prakash Sahu Insurance Services")
+  tagline            String   @default("YOUR PROTECTION. OUR PRIORITY.")
+  logoUrl            String   @default("/images/ops-logo.jpg")
+  phone              String   @default("+91 98261 45892")
+  whatsapp           String   @default("+91 98261 45892")
+  email              String   @default("contact@opsinsurance.in")
+  address            String   @default("Shop No. 12, Commercial Complex, Pandri")
+  city               String   @default("Raipur")
+  state              String   @default("Chhattisgarh")
+  pincode            String   @default("492004")
+  workingHours       String   @default("Mon - Sat: 9:30 AM - 7:30 PM")
+  
+  heroHeadline       String   @default("Protecting What Matters Most")
+  heroSubheading     String   @default("Reliable insurance solutions for you, your family and your future.")
+  yearsExperience    String   @default("15+")
+  customersServed    String   @default("2500+")
+  claimsSupportRate  String   @default("99.4%")
+  aboutStory         String   @default("With over 15 years of dedicated insurance advisory experience in Central India, Om Prakash Sahu Insurance Services has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.")
+  
+  // Notification integrations (configurable, dormant until credentials provided)
+  smsEnabled         Boolean  @default(false)
+  smsApiKey          String?
+  smsSenderId        String?
+  
+  whatsappEnabled    Boolean  @default(false)
+  whatsappApiKey     String?
+  
+  emailEnabled       Boolean  @default(false)
+  emailApiKey        String?
+  emailFrom          String?
+  
+  // Reminder threshold days (JSON array string: "[30, 15, 7, 1, 0]")
+  reminderDaysJson   String   @default("[30, 15, 7, 1, 0]")
+  
+  updatedAt          DateTime @updatedAt
+}
+
+model ActivityLog {
+  id          String     @id @default(cuid())
+  adminUserId String?
+  adminUser   AdminUser? @relation(fields: [adminUserId], references: [id], onDelete: SetNull)
+  action      String     // LOGIN, LOGOUT, CREATE_CUSTOMER, UPDATE_POLICY, UPLOAD_DOCUMENT, SEND_REMINDER
+  entity      String     // CUSTOMER, POLICY, DOCUMENT, REMINDER, SETTINGS
+  entityId    String?
+  details     String?
+  ipAddress   String?
+  createdAt   DateTime   @default(now())
+
+  @@index([createdAt])
+}
