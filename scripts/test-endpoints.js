@@ -1,13 +1,13 @@
 async function test() {
   const base = "http://localhost:3000";
-  console.log("=== Testing OPS Insurance Website Endpoints ===");
+  console.log("=== Testing OP Life Solutions Website Endpoints ===");
   
   // 1. Home page
   const home = await fetch(base);
   console.log("1. GET / status:", home.status);
   const homeHtml = await home.text();
-  console.log("   - Title match:", homeHtml.includes("OM PRAKASH SAHU INSURANCE SERVICES"));
-  console.log("   - Logo included:", homeHtml.includes("/images/ops-logo.jpg"));
+  console.log("   - Title match:", homeHtml.includes("OP LIFE SOLUTIONS"));
+  console.log("   - Logo included:", homeHtml.includes("/images/op-life-solutions-logo.jpg"));
   console.log("   - Services included:", homeHtml.includes("Motor Insurance") && homeHtml.includes("Health Insurance"));
 
   // 2. Policy lookup request OTP

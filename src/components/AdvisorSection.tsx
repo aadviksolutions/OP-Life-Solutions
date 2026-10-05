@@ -11,8 +11,8 @@ export default function AdvisorSection() {
       exp: "15+ Years Experience",
       specialization: "Health, Term Life & Corporate Risk Advisory",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80",
-      phone: "+91 98261 45892",
-      email: "contact@opsinsurance.in",
+      phone: "+91 62688 19299",
+      email: "contact@oplifesolutions.in",
       bio: "Dedicated insurance counselor with over a decade and a half of expertise helping clients navigate policy fine print and securing timely cashless claim approvals.",
     },
     {
@@ -21,8 +21,8 @@ export default function AdvisorSection() {
       exp: "8+ Years Experience",
       specialization: "Cashless Hospitalization & Motor Claims TPA Coordination",
       image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
-      phone: "+91 98261 45892",
-      email: "claims@opsinsurance.in",
+      phone: "+91 62688 19299",
+      email: "claims@oplifesolutions.in",
       bio: "Manages hospital pre-authorizations, surveyor coordination, and claim documentation to ensure zero rejection and rapid reimbursement.",
     },
     {
@@ -31,8 +31,8 @@ export default function AdvisorSection() {
       exp: "7+ Years Experience",
       specialization: "Bumper-to-Bumper Motor & Commercial Asset Policies",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=800&q=80",
-      phone: "+91 98261 45892",
-      email: "motor@opsinsurance.in",
+      phone: "+91 62688 19299",
+      email: "motor@oplifesolutions.in",
       bio: "Specializes in multi-vehicle fleet quotes, return-to-invoice add-ons, and comprehensive commercial shop & factory protection.",
     },
   ];
@@ -105,8 +105,8 @@ export default function AdvisorSection() {
                   </a>
 
                   <a
-                    href={`https://api.whatsapp.com/send?phone=919826145892&text=${encodeURIComponent(
-                      `Namaste ${adv.name} ji, I would like to schedule an insurance consultation.`
+                    href={`https://api.whatsapp.com/send?phone=916268819299&text=${encodeURIComponent(
+                      `Namaste ${adv.name} ji, I would like to schedule an insurance consultation with OP Life Solutions.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

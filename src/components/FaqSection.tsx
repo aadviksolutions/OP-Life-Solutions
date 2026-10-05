@@ -43,11 +43,11 @@ export default function FaqSection() {
                     Speak directly with Om Prakash Sahu for clarification.
                   </p>
                   <a
-                    href="tel:+919826145892"
+                    href="tel:+916268819299"
                     className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F2C96B] hover:underline mt-2"
                   >
                     <PhoneCall className="w-3.5 h-3.5" />
-                    <span>Call +91 98261 45892</span>
+                    <span>Call +91 62688 19299</span>
                   </a>
                 </div>
               </div>

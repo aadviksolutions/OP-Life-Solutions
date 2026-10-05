@@ -9,8 +9,8 @@ import CtaBanner from "@/components/CtaBanner";
 import { ShieldCheck, Award, Users, HeartHandshake } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Om Prakash Sahu Insurance Services",
-  description: "Learn about Om Prakash Sahu Insurance Services — trusted insurance advisory firm in Raipur, Chhattisgarh with 15+ years of dedicated service.",
+  title: "About Us | OP LIFE SOLUTIONS",
+  description: "Learn about OP Life Solutions — trusted insurance advisory firm founded by Om Prakash Sahu in Raipur, Chhattisgarh with 15+ years of dedicated service.",
 };
 
 export default function AboutPage() {
@@ -33,7 +33,7 @@ export default function AboutPage() {
               15+ Years of Dedicated Service
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              About Om Prakash Sahu Insurance
+              About OP Life Solutions
             </h1>
             <p className="mt-4 text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
               Your trusted partner in navigating insurance policies, claims advocacy, and uncompromised family security across Chhattisgarh.

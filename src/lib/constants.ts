@@ -122,7 +122,7 @@ export const TESTIMONIALS = [
     rating: 5
   },
   {
-    quote: "I have been renewing my commercial fleet and personal Creta insurance through Om Prakash Sahu Insurance Services for the past 6 years. Their renewal reminder arrives well on time and claims are processed without any headache.",
+    quote: "I have been renewing my commercial fleet and personal Creta insurance through OP Life Solutions for the past 6 years. Their renewal reminder arrives well on time and claims are processed without any headache.",
     author: "Manoj Kumar Patidar",
     location: "Rajnandgaon, CG",
     policyType: "Motor Insurance",
@@ -148,7 +148,7 @@ export const FAQS = [
   },
   {
     q: "What should I do when my policy is due for renewal?",
-    a: "Our automated advisory system notifies you via WhatsApp and SMS 30, 15, and 7 days prior to expiry. You can also click 'Talk to an Advisor' or WhatsApp us directly at +91 98261 45892 with your vehicle/policy details, and we will issue your renewed schedule seamlessly."
+    a: "Our automated advisory system notifies you via WhatsApp and SMS 30, 15, and 7 days prior to expiry. You can also click 'Talk to an Advisor' or WhatsApp us directly at +91 62688 19299 with your vehicle/policy details, and we will issue your renewed schedule seamlessly."
   },
   {
     q: "How do you help during an insurance claim?",

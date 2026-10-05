@@ -399,7 +399,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
                         onClick={() => {
                           setReminderModal(p);
                           setReminderCustomMsg(
-                            `Namaste ${customer.name} ji, reminder from Om Prakash Sahu Insurance Services regarding your ${p.insuranceCompany} ${p.policyType} policy #${p.policyNumber} due on ${formatDate(p.expiryDate)}. Call +91 98261 45892 for renewal.`
+                            `Namaste ${customer.name} ji, reminder from OP Life Solutions regarding your ${p.insuranceCompany} ${p.policyType} policy #${p.policyNumber} due on ${formatDate(p.expiryDate)}. Call +91 62688 19299 for renewal.`
                           );
                         }}
                         className="inline-flex items-center gap-1.5 bg-[#0B666B] hover:bg-[#07474B] text-white text-xs font-bold px-3.5 py-2 rounded-xl transition"

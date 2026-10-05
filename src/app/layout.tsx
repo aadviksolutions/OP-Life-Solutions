@@ -13,21 +13,21 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "OM PRAKASH SAHU INSURANCE SERVICES | Your Protection. Our Priority.",
+  title: "OP LIFE SOLUTIONS | SECURE TODAY | BRIGHTER TOMORROW",
   description:
-    "Leading insurance advisory firm in Raipur, Chhattisgarh. Customized Motor, Health, Life, Travel, Home, and Commercial Business insurance solutions with personalized claims advocacy.",
+    "OP Life Solutions — Insurance advisory services by Om Prakash Sahu. Customized Motor, Health, Life, Travel, Home, and Commercial Business insurance solutions with personalized claims advocacy.",
   keywords: [
-    "Om Prakash Sahu Insurance",
-    "Insurance Services Raipur",
-    "Health Insurance Chhattisgarh",
-    "Motor Insurance Raipur",
+    "OP Life Solutions",
+    "Om Prakash Sahu",
+    "Insurance Services",
+    "Health Insurance",
+    "Motor Insurance",
     "Term Life Insurance Advisor",
-    "Star Health Insurance Raipur",
-    "HDFC ERGO Raipur",
+    "Life Solutions",
   ],
   icons: {
-    icon: "/images/ops-logo.jpg",
-    apple: "/images/ops-logo.jpg",
+    icon: "/images/op-life-solutions-logo.jpg",
+    apple: "/images/op-life-solutions-logo.jpg",
   },
 };
 

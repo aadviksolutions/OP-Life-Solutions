@@ -227,7 +227,7 @@ export default function PolicyLookupSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 bg-[#06223B] hover:bg-[#0B314D] text-white font-bold py-4 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-base group disabled:opacity-70"
+                  className="w-full flex items-center justify-center gap-2 bg-[#06223B] hover:bg-[#0B314D] text-white font-bold py-4 px-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-200 text-base group disabled:opacity-70 cursor-pointer"
                 >
                   {loading ? (
                     <>
@@ -249,7 +249,7 @@ export default function PolicyLookupSection() {
                 <button
                   type="button"
                   onClick={() => setQuery("9826011223")}
-                  className="underline hover:text-[#0B666B] font-mono mx-1"
+                  className="underline hover:text-[#0B666B] font-mono mx-1 cursor-pointer"
                 >
                   9826011223
                 </button>{" "}
@@ -257,7 +257,7 @@ export default function PolicyLookupSection() {
                 <button
                   type="button"
                   onClick={() => setQuery("9425233445")}
-                  className="underline hover:text-[#0B666B] font-mono mx-1"
+                  className="underline hover:text-[#0B666B] font-mono mx-1 cursor-pointer"
                 >
                   9425233445
                 </button>{" "}
@@ -265,7 +265,7 @@ export default function PolicyLookupSection() {
                 <button
                   type="button"
                   onClick={() => setQuery("HDFC-MOT-889921")}
-                  className="underline hover:text-[#0B666B] font-mono mx-1"
+                  className="underline hover:text-[#0B666B] font-mono mx-1 cursor-pointer"
                 >
                   HDFC-MOT-889921
                 </button>
@@ -317,7 +317,7 @@ export default function PolicyLookupSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full flex items-center justify-center gap-2 bg-[#06223B] hover:bg-[#0B314D] text-white font-bold py-3.5 px-4 rounded-xl shadow-md transition disabled:opacity-70"
+                  className="w-full flex items-center justify-center gap-2 bg-[#06223B] hover:bg-[#0B314D] text-white font-bold py-3.5 px-4 rounded-xl shadow-md transition disabled:opacity-70 cursor-pointer"
                 >
                   {loading ? (
                     <RefreshCw className="w-5 h-5 animate-spin" />
@@ -356,7 +356,7 @@ export default function PolicyLookupSection() {
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#06223B] to-[#0B666B] text-white flex items-center justify-center text-xl font-black shadow-md">
                   {customer.name
                     .split(" ")
-                    .map((n) => n[0])
+                    .map((n: string) => n[0])
                     .join("")
                     .slice(0, 2)}
                 </div>
@@ -384,7 +384,7 @@ export default function PolicyLookupSection() {
 
               <button
                 onClick={handleReset}
-                className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition"
+                className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-2 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-100 transition cursor-pointer"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 <span>Search Another Policy</span>
@@ -398,13 +398,13 @@ export default function PolicyLookupSection() {
                   Your Insurance Policies ({policies.length})
                 </h4>
                 <span className="text-xs text-slate-500">
-                  Data uploaded and managed by Om Prakash Sahu Insurance Services
+                  Data uploaded and managed by OP Life Solutions
                 </span>
               </div>
 
               {policies.length === 0 ? (
                 <div className="bg-white p-8 rounded-2xl text-center border border-slate-200 text-slate-500">
-                  No policies recorded yet. Please contact your advisor at +91 98261 45892.
+                  No policies recorded yet. Please contact your advisor at +91 62688 19299.
                 </div>
               ) : (
                 policies.map((pol) => {
@@ -424,7 +424,7 @@ export default function PolicyLookupSection() {
                             Policy Expired on {formatDate(pol.expiryDate)} — Immediate renewal required!
                           </span>
                           <a
-                            href={`https://api.whatsapp.com/send?phone=919826145892&text=${encodeURIComponent(
+                            href={`https://api.whatsapp.com/send?phone=916268819299&text=${encodeURIComponent(
                               `Namaste Om Prakash Sahu ji, my policy ${pol.policyNumber} is expired. Please help with instant renewal.`
                             )}`}
                             target="_blank"
@@ -443,7 +443,7 @@ export default function PolicyLookupSection() {
                             Renewal Due in {pol.daysRemaining} days (Expires {formatDate(pol.expiryDate)})
                           </span>
                           <a
-                            href={`https://api.whatsapp.com/send?phone=919826145892&text=${encodeURIComponent(
+                            href={`https://api.whatsapp.com/send?phone=916268819299&text=${encodeURIComponent(
                               `Namaste Om Prakash Sahu ji, I want to renew my ${pol.insuranceCompany} policy ${pol.policyNumber} due in ${pol.daysRemaining} days.`
                             )}`}
                             target="_blank"
@@ -576,7 +576,7 @@ export default function PolicyLookupSection() {
                           {/* Quick Action Button for this Policy */}
                           <div className="flex items-center gap-2 w-full sm:w-auto">
                             <a
-                              href={`https://api.whatsapp.com/send?phone=919826145892&text=${encodeURIComponent(
+                              href={`https://api.whatsapp.com/send?phone=916268819299&text=${encodeURIComponent(
                                 `Namaste Om Prakash Sahu ji, I need assistance regarding my ${pol.insuranceCompany} policy #${pol.policyNumber}.`
                               )}`}
                               target="_blank"
@@ -587,7 +587,7 @@ export default function PolicyLookupSection() {
                               <span>WhatsApp</span>
                             </a>
                             <a
-                              href="tel:+919826145892"
+                              href="tel:+916268819299"
                               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 bg-[#06223B] hover:bg-[#0B314D] text-white text-xs font-bold px-4 py-2.5 rounded-xl shadow-xs transition"
                             >
                               <Phone className="w-3.5 h-3.5 text-[#D9A441]" />
@@ -614,11 +614,11 @@ export default function PolicyLookupSection() {
               </div>
               <div className="flex items-center gap-3 shrink-0">
                 <a
-                  href="tel:+919826145892"
+                  href="tel:+916268819299"
                   className="inline-flex items-center gap-2 bg-[#D9A441] hover:bg-[#c49232] text-[#06223B] font-bold px-5 py-3 rounded-xl shadow-md text-sm transition"
                 >
                   <Phone className="w-4 h-4" />
-                  <span>Call +91 98261 45892</span>
+                  <span>Call +91 62688 19299</span>
                 </a>
               </div>
             </div>

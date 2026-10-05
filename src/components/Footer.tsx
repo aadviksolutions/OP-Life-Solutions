@@ -22,29 +22,29 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg overflow-hidden shrink-0 border border-slate-700 bg-white">
+              <div className="h-12 px-2 py-1 rounded-lg overflow-hidden shrink-0 border border-slate-700 bg-white flex items-center justify-center">
                 <img
-                  src="/images/ops-logo.jpg"
-                  alt="Om Prakash Sahu Insurance Logo"
-                  className="w-full h-full object-cover"
+                  src="/images/op-life-solutions-logo.jpg"
+                  alt="OP Life Solutions Logo"
+                  className="h-full w-auto object-contain"
                 />
               </div>
               <div>
                 <span className="font-extrabold text-white text-base tracking-tight block leading-tight">
-                  OM PRAKASH SAHU
+                  OP LIFE SOLUTIONS
                 </span>
                 <span className="text-[11px] font-semibold tracking-wider text-[#F2C96B] uppercase block">
-                  INSURANCE SERVICES
+                  SECURE TODAY | BRIGHTER TOMORROW
                 </span>
               </div>
             </div>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Trusted insurance advisory firm headquartered in Raipur, Chhattisgarh. Specializing in customized health mediclaim, motor insurance, life & term protection, and corporate asset safeguarding.
+              Trusted insurance advisory firm founded by Mr. Om Prakash Sahu, headquartered in Raipur, Chhattisgarh. Specializing in customized health mediclaim, motor insurance, life & term protection, and corporate asset safeguarding.
             </p>
 
             <div className="inline-block py-1.5 px-3 rounded-lg bg-[#0B666B]/30 border border-[#0B666B]/50 text-xs font-semibold text-[#F2C96B]">
-              Tagline: YOUR PROTECTION. OUR PRIORITY.
+              Tagline: SECURE TODAY | BRIGHTER TOMORROW
             </div>
           </div>
 
@@ -137,11 +137,11 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2 text-slate-300">
               <Phone className="w-4 h-4 text-[#0B666B] shrink-0" />
-              <span>+91 98261 45892 / +91 94252 33445</span>
+              <span>+91 62688 19299</span>
             </div>
             <div className="flex items-center gap-2 text-slate-300">
               <Mail className="w-4 h-4 text-[#D9A441] shrink-0" />
-              <span>contact@opsinsurance.in</span>
+              <span>contact@oplifesolutions.in</span>
             </div>
             <div className="flex items-center gap-2 text-slate-300">
               <Clock className="w-4 h-4 text-[#0B666B] shrink-0" />
@@ -153,7 +153,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>
-            © {currentYear} Om Prakash Sahu Insurance Services. All rights reserved. Insurance is the subject matter of solicitation.
+            © {currentYear} OP Life Solutions. All rights reserved. Insurance is the subject matter of solicitation.
           </p>
 
           <div className="flex items-center gap-6">

@@ -83,20 +83,20 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       >
         <div>
           {/* Brand Header */}
-          <div className="p-5 border-b border-white/10 flex items-center justify-between">
-            <a href="/admin/dashboard" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg overflow-hidden shrink-0 border border-slate-700 bg-white">
+          <div className="p-4 border-b border-white/10 flex items-center justify-between">
+            <a href="/admin/dashboard" className="flex items-center gap-2.5">
+              <div className="h-10 px-1.5 py-0.5 rounded-lg overflow-hidden shrink-0 border border-slate-700 bg-white flex items-center justify-center">
                 <img
-                  src="/images/ops-logo.jpg"
-                  alt="OPS Logo"
-                  className="w-full h-full object-cover"
+                  src="/images/op-life-solutions-logo.jpg"
+                  alt="OP Life Solutions Logo"
+                  className="h-full w-auto object-contain"
                 />
               </div>
               <div>
-                <span className="font-extrabold text-sm text-white tracking-tight leading-none block">
-                  OM PRAKASH SAHU
+                <span className="font-extrabold text-xs text-white tracking-tight leading-tight block">
+                  OP LIFE SOLUTIONS
                 </span>
-                <span className="text-[10px] font-bold text-[#D9A441] tracking-wider uppercase block mt-0.5">
+                <span className="text-[9px] font-bold text-[#D9A441] tracking-wider uppercase block mt-0.5">
                   ADMIN CONSOLE
                 </span>
               </div>

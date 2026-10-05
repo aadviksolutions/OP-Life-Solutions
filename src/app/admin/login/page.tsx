@@ -51,18 +51,18 @@ export default function AdminLoginPage() {
       <div className="relative z-10 w-full max-w-md">
         {/* Logo and header */}
         <div className="text-center mb-8">
-          <div className="inline-block p-1 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 shadow-2xl mb-4">
+          <div className="inline-block p-2 bg-white rounded-2xl border border-white/20 shadow-2xl mb-4">
             <img
-              src="/images/ops-logo.jpg"
-              alt="Om Prakash Sahu Insurance"
-              className="w-16 h-16 object-cover rounded-xl"
+              src="/images/op-life-solutions-logo.jpg"
+              alt="OP Life Solutions"
+              className="h-14 w-auto object-contain"
             />
           </div>
           <h2 className="text-2xl font-black text-white tracking-tight">
             Agency Management Portal
           </h2>
           <p className="text-xs text-[#D9A441] font-semibold tracking-wider uppercase mt-1">
-            OM PRAKASH SAHU INSURANCE SERVICES
+            OP LIFE SOLUTIONS
           </p>
         </div>
 
@@ -87,7 +87,7 @@ export default function AdminLoginPage() {
                   required
                   value={usernameOrEmail}
                   onChange={(e) => setUsernameOrEmail(e.target.value)}
-                  placeholder="admin or admin@opsinsurance.in"
+                  placeholder="admin or admin@oplifesolutions.in"
                   className="w-full pl-10 pr-4 py-3 bg-[#0B314D]/80 border border-slate-700 rounded-xl text-white placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#D9A441] focus:border-transparent transition"
                   disabled={loading}
                 />
@@ -101,7 +101,7 @@ export default function AdminLoginPage() {
                 </label>
                 <button
                   type="button"
-                  onClick={() => alert("For security, password reset requests are handled by the system administrator. Please contact Om Prakash Sahu at +91 98261 45892.")}
+                  onClick={() => alert("For security, password reset requests are handled by the system administrator. Please contact Om Prakash Sahu at +91 62688 19299.")}
                   className="text-xs text-[#D9A441] hover:underline"
                 >
                   Forgot Password?

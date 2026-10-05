@@ -12,9 +12,9 @@ interface ServiceDetailModalProps {
 export default function ServiceDetailModal({ service, onClose }: ServiceDetailModalProps) {
   if (!service) return null;
 
-  const waPhone = "919826145892";
+  const waPhone = "916268819299";
   const waText = encodeURIComponent(
-    `Namaste Om Prakash Sahu ji, I want to consult regarding ${service.name} coverage.`
+    `Namaste Om Prakash Sahu ji, I want to consult regarding ${service.name} coverage with OP Life Solutions.`
   );
 
   return (
@@ -43,7 +43,7 @@ export default function ServiceDetailModal({ service, onClose }: ServiceDetailMo
           <div className="absolute bottom-4 left-6 right-6">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D9A441] text-[#06223B] text-xs font-bold uppercase tracking-wider mb-2">
               <ShieldCheck className="w-3.5 h-3.5" />
-              Specialized Advisory
+              OP Life Solutions Advisory
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white">
               {service.name}
@@ -104,11 +104,11 @@ export default function ServiceDetailModal({ service, onClose }: ServiceDetailMo
               <span>WhatsApp</span>
             </a>
             <a
-              href="tel:+919826145892"
+              href="tel:+916268819299"
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 bg-[#06223B] hover:bg-[#0B314D] text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow-xs transition"
             >
               <Phone className="w-4 h-4 text-[#D9A441]" />
-              <span>Call Advisor</span>
+              <span>Call +91 62688 19299</span>
             </a>
           </div>
         </div>

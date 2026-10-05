@@ -109,7 +109,7 @@ export default function EnquiriesManagementPage() {
             const waPhone = enq.mobile.replace(/\D/g, "");
             const fullPhone = waPhone.startsWith("91") ? waPhone : "91" + waPhone;
             const waUrl = `https://api.whatsapp.com/send?phone=${fullPhone}&text=${encodeURIComponent(
-              `Namaste ${enq.name} ji, thank you for reaching out to Om Prakash Sahu Insurance Services regarding ${enq.insuranceType}. How can I assist you?`
+              `Namaste ${enq.name} ji, thank you for reaching out to OP Life Solutions regarding ${enq.insuranceType}. How can I assist you?`
             )}`;
 
             return (

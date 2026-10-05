@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
   } catch (error) {
     console.error("Enquiry submission error:", error);
     return NextResponse.json(
-      { error: "Failed to submit enquiry. Please call us directly at +91 98261 45892." },
+      { error: "Failed to submit enquiry. Please call us directly at +91 62688 19299." },
       { status: 500 }
     );
   }

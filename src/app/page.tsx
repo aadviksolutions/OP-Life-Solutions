@@ -29,8 +29,8 @@ export default async function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <TopBar
-        phone={settings?.phone || "+91 98261 45892"}
-        email={settings?.email || "contact@opsinsurance.in"}
+        phone={settings?.phone || "+91 62688 19299"}
+        email={settings?.email || "contact@oplifesolutions.in"}
         address={`${settings?.address || "Shop No. 12, Pandri"}, ${settings?.city || "Raipur"}, ${settings?.state || "CG"}`}
       />
       <Navbar />

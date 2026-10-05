@@ -22,7 +22,7 @@ export default function AboutSection() {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
-                  alt="Om Prakash Sahu Insurance Advisory Consultation"
+                  alt="OP Life Solutions Advisory Consultation"
                   className="w-full h-[440px] sm:h-[500px] object-cover object-top hover:scale-102 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#06223B]/60 via-transparent to-transparent" />
@@ -50,7 +50,7 @@ export default function AboutSection() {
           <div className="lg:col-span-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B666B]/10 border border-[#0B666B]/30 text-[#0B666B] text-xs font-bold uppercase tracking-wider mb-4">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>About Om Prakash Sahu Insurance</span>
+              <span>About OP Life Solutions</span>
             </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#06223B] tracking-tight leading-tight mb-6">
@@ -58,7 +58,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-6">
-              At <strong>Om Prakash Sahu Insurance Services</strong>, we believe insurance is not just a policy document — it is a promise of financial protection when life takes unexpected turns. Located in Raipur, Chhattisgarh, we have spent over 15 years safeguarding families, vehicles, properties, and enterprises.
+              At <strong>OP Life Solutions</strong>, led by experienced insurance counselor <strong>Om Prakash Sahu</strong>, we believe insurance is not just a policy document — it is a promise of financial protection when life takes unexpected turns. We have spent over 15 years safeguarding families, vehicles, properties, and enterprises.
             </p>
 
             <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
@@ -89,11 +89,11 @@ export default function AboutSection() {
               </a>
 
               <a
-                href="tel:+919826145892"
+                href="tel:+916268819299"
                 className="inline-flex items-center gap-2 border border-slate-300 hover:border-[#06223B] text-[#06223B] font-semibold text-sm px-5 py-3.5 rounded-xl hover:bg-slate-100 transition"
               >
                 <PhoneCall className="w-4 h-4 text-[#0B666B]" />
-                <span>+91 98261 45892</span>
+                <span>+91 62688 19299</span>
               </a>
             </div>
           </div>

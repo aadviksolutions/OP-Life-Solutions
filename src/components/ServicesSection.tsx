@@ -81,15 +81,15 @@ export default function ServicesSection() {
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
                   <button
                     onClick={() => setSelectedService(srv)}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#06223B] group-hover:text-[#0B666B] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-[#06223B] group-hover:text-[#0B666B] transition-colors cursor-pointer"
                   >
                     <span>Know More</span>
                     <ArrowRight className="w-4 h-4 text-[#D9A441] group-hover:translate-x-1.5 transition-transform" />
                   </button>
 
                   <a
-                    href={`https://api.whatsapp.com/send?phone=919826145892&text=${encodeURIComponent(
-                      `Namaste Om Prakash Sahu ji, please advise me on ${srv.name}.`
+                    href={`https://api.whatsapp.com/send?phone=916268819299&text=${encodeURIComponent(
+                      `Namaste Om Prakash Sahu ji, please advise me on ${srv.name} with OP Life Solutions.`
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"

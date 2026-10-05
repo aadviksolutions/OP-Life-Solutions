@@ -8,8 +8,8 @@ import CtaBanner from "@/components/CtaBanner";
 import ContactSection from "@/components/ContactSection";
 
 export const metadata = {
-  title: "Insurance Services | Om Prakash Sahu Insurance Services",
-  description: "Explore Motor, Health, Life, Travel, Home, and Business Insurance plans tailored by Om Prakash Sahu Insurance Services.",
+  title: "Insurance Services | OP LIFE SOLUTIONS",
+  description: "Explore Motor, Health, Life, Travel, Home, and Business Insurance plans tailored by OP Life Solutions.",
 };
 
 export default function ServicesPage() {

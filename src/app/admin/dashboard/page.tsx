@@ -303,7 +303,7 @@ export default function AdminDashboardPage() {
                         <td className="py-3 px-2 text-right whitespace-nowrap">
                           <a
                             href={`https://api.whatsapp.com/send?phone=91${p.mobile}&text=${encodeURIComponent(
-                              `Namaste ${p.customerName} ji, reminder from Om Prakash Sahu Insurance Services: Your ${p.insuranceCompany} ${p.policyType} policy #${p.policyNumber} is due for renewal. Please contact +91 98261 45892.`
+                              `Namaste ${p.customerName} ji, reminder from OP Life Solutions: Your ${p.insuranceCompany} ${p.policyType} policy #${p.policyNumber} is due for renewal. Please contact +91 62688 19299.`
                             )}`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -375,7 +375,7 @@ export default function AdminDashboardPage() {
                       <span>+91 {enq.mobile}</span>
                       <a
                         href={`https://api.whatsapp.com/send?phone=91${enq.mobile}&text=${encodeURIComponent(
-                          `Namaste ${enq.name} ji, thank you for inquiring about ${enq.insuranceType} with Om Prakash Sahu Insurance Services.`
+                          `Namaste ${enq.name} ji, thank you for inquiring about ${enq.insuranceType} with OP Life Solutions.`
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"

@@ -63,9 +63,9 @@ export default function ContactSection() {
     }
   };
 
-  const waPhone = "919826145892";
+  const waPhone = "916268819299";
   const waText = encodeURIComponent(
-    "Namaste Om Prakash Sahu ji, I want to talk to an advisor regarding insurance coverage."
+    "Namaste Om Prakash Sahu ji (OP Life Solutions), I want to talk to an advisor regarding insurance coverage."
   );
 
   return (
@@ -90,7 +90,7 @@ export default function ContactSection() {
             {/* Quick Action Buttons */}
             <div className="flex flex-wrap items-center gap-3 mb-10">
               <a
-                href="tel:+919826145892"
+                href="tel:+916268819299"
                 className="inline-flex items-center gap-2 bg-[#06223B] hover:bg-[#0B314D] text-white font-bold text-sm px-5 py-3 rounded-xl shadow-md transition"
               >
                 <Phone className="w-4 h-4 text-[#D9A441]" />
@@ -125,7 +125,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-bold text-[#06223B]">Phone & Mobile</h4>
                   <p className="text-xs text-slate-600 mt-0.5">
-                    +91 98261 45892 / +91 94252 33445
+                    +91 62688 19299
                   </p>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function ContactSection() {
                 <div>
                   <h4 className="font-bold text-[#06223B]">Email Inquiries</h4>
                   <p className="text-xs text-slate-600 mt-0.5">
-                    contact@opsinsurance.in / opsahu.insurance@gmail.com
+                    contact@oplifesolutions.in
                   </p>
                 </div>
               </div>

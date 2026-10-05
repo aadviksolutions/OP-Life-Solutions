@@ -6,8 +6,8 @@ import ContactSection from "@/components/ContactSection";
 import FaqSection from "@/components/FaqSection";
 
 export const metadata = {
-  title: "Contact Us | Om Prakash Sahu Insurance Services",
-  description: "Get in touch with Om Prakash Sahu Insurance Services in Raipur, Chhattisgarh for personalized insurance guidance and claims advocacy.",
+  title: "Contact Us | OP LIFE SOLUTIONS",
+  description: "Get in touch with OP Life Solutions in Raipur, Chhattisgarh for personalized insurance guidance and claims advocacy by Om Prakash Sahu.",
 };
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
               Advisory Desk & Claims Helpline
             </span>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              Contact Om Prakash Sahu
+              Contact OP Life Solutions
             </h1>
             <p className="mt-3 text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
               We are located in Pandri Market, Raipur. Reach out for consultations, quote comparisons, or claim support.

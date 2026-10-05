@@ -28,12 +28,12 @@ export async function GET() {
 
     if (!settings) {
       settings = {
-        companyName: "Om Prakash Sahu Insurance Services",
-        tagline: "YOUR PROTECTION. OUR PRIORITY.",
-        logoUrl: "/images/ops-logo.jpg",
-        phone: "+91 98261 45892",
-        whatsapp: "+91 98261 45892",
-        email: "contact@opsinsurance.in",
+        companyName: "OP LIFE SOLUTIONS",
+        tagline: "SECURE TODAY | BRIGHTER TOMORROW",
+        logoUrl: "/images/op-life-solutions-logo.jpg",
+        phone: "+91 62688 19299",
+        whatsapp: "+91 62688 19299",
+        email: "contact@oplifesolutions.in",
         address: "Shop No. 12, Commercial Complex, Pandri Market",
         city: "Raipur",
         state: "Chhattisgarh",
@@ -44,7 +44,7 @@ export async function GET() {
         yearsExperience: "15+",
         customersServed: "2500+",
         claimsSupportRate: "99.4%",
-        aboutStory: "With over 15 years of dedicated insurance advisory experience in Raipur and throughout Chhattisgarh, Om Prakash Sahu Insurance Services has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.",
+        aboutStory: "With over 15 years of dedicated insurance advisory experience in Raipur and throughout Chhattisgarh, OP Life Solutions, founded by Om Prakash Sahu, has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.",
       };
     }
 

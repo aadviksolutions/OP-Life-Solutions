@@ -105,8 +105,8 @@ export default function ReportsPage() {
 
       {/* Print Title Header */}
       <div className="hidden print:block text-center border-b pb-4 mb-6">
-        <h1 className="text-2xl font-black">OM PRAKASH SAHU INSURANCE SERVICES</h1>
-        <p className="text-xs">Agency Portfolio & Policy Retention Report — Raipur, Chhattisgarh</p>
+        <h1 className="text-2xl font-black">OP LIFE SOLUTIONS</h1>
+        <p className="text-xs">OP Life Solutions — Agency Portfolio & Policy Retention Report — Raipur, Chhattisgarh</p>
         <p className="text-[10px] text-slate-400">Generated on: {new Date().toLocaleDateString("en-IN")}</p>
       </div>
 

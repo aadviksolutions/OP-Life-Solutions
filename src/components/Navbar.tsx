@@ -1,8 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Link from "next/navigation";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, PhoneCall, ShieldCheck, ArrowRight, FileText } from "lucide-react";
 
@@ -37,24 +35,24 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Brand Logo with 3D Crest from User Upload */}
+          {/* Brand Logo with OP LIFE SOLUTIONS from User Upload */}
           <a href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg overflow-hidden shrink-0 shadow-sm border border-slate-200 bg-white">
+            <div className="relative h-11 sm:h-13 w-auto max-w-[220px] rounded-lg overflow-hidden shrink-0 bg-white flex items-center">
               <img
-                src="/images/ops-logo.jpg"
-                alt="Om Prakash Sahu Insurance Services Logo"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                src="/images/op-life-solutions-logo.jpg"
+                alt="OP LIFE SOLUTIONS Logo"
+                className="h-full w-auto object-contain group-hover:scale-102 transition-transform duration-300"
               />
             </div>
-            <div className="flex flex-col">
+            <div className="hidden sm:flex flex-col">
               <span className="font-extrabold text-[#06223B] text-base sm:text-lg tracking-tight leading-tight group-hover:text-[#0B666B] transition-colors">
-                OM PRAKASH SAHU
+                OP LIFE SOLUTIONS
               </span>
-              <span className="text-[11px] sm:text-xs font-semibold tracking-wider text-[#D9A441] uppercase">
-                INSURANCE SERVICES
+              <span className="text-[10px] sm:text-[11px] font-semibold tracking-wider text-[#D9A441] uppercase">
+                SECURE TODAY | BRIGHTER TOMORROW
               </span>
-              <span className="hidden md:inline-block text-[9px] text-slate-500 font-medium tracking-widest mt-0.5">
-                YOUR PROTECTION. OUR PRIORITY.
+              <span className="text-[9px] text-slate-500 font-medium tracking-wide">
+                Advisory Desk: Om Prakash Sahu
               </span>
             </div>
           </a>
@@ -100,11 +98,11 @@ export default function Navbar() {
           {/* Mobile menu button */}
           <div className="flex items-center lg:hidden gap-2">
             <a
-              href="/contact"
+              href="tel:+916268819299"
               className="inline-flex sm:hidden items-center gap-1 bg-[#06223B] text-white text-xs font-semibold px-3 py-1.5 rounded-full"
             >
               <PhoneCall className="w-3 h-3 text-[#D9A441]" />
-              Contact
+              Call
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -151,7 +149,7 @@ export default function Navbar() {
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-xl bg-[#06223B] text-white text-sm font-semibold shadow hover:bg-[#0B314D] transition"
                 >
-                  <span>Talk to an Advisor</span>
+                  <span>Talk to Om Prakash Sahu</span>
                   <ArrowRight className="w-4 h-4 text-[#F2C96B]" />
                 </a>
               </div>

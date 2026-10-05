@@ -178,12 +178,12 @@ model Enquiry {
 
 model AdminSettings {
   id                 String   @id @default("default-settings")
-  companyName        String   @default("Om Prakash Sahu Insurance Services")
-  tagline            String   @default("YOUR PROTECTION. OUR PRIORITY.")
-  logoUrl            String   @default("/images/ops-logo.jpg")
-  phone              String   @default("+91 98261 45892")
-  whatsapp           String   @default("+91 98261 45892")
-  email              String   @default("contact@opsinsurance.in")
+  companyName        String   @default("OP LIFE SOLUTIONS")
+  tagline            String   @default("SECURE TODAY | BRIGHTER TOMORROW")
+  logoUrl            String   @default("/images/op-life-solutions-logo.jpg")
+  phone              String   @default("+91 62688 19299")
+  whatsapp           String   @default("+91 62688 19299")
+  email              String   @default("contact@oplifesolutions.in")
   address            String   @default("Shop No. 12, Commercial Complex, Pandri")
   city               String   @default("Raipur")
   state              String   @default("Chhattisgarh")
@@ -195,7 +195,7 @@ model AdminSettings {
   yearsExperience    String   @default("15+")
   customersServed    String   @default("2500+")
   claimsSupportRate  String   @default("99.4%")
-  aboutStory         String   @default("With over 15 years of dedicated insurance advisory experience in Central India, Om Prakash Sahu Insurance Services has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.")
+  aboutStory         String   @default("With over 15 years of dedicated insurance advisory experience in Central India, OP Life Solutions, founded by Om Prakash Sahu, has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.")
   
   // Notification integrations (configurable, dormant until credentials provided)
   smsEnabled         Boolean  @default(false)

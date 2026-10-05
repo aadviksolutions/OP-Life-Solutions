@@ -24,7 +24,7 @@ export default function Hero({
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=2000&q=85"
-          alt="Happy Indian family protected by insurance"
+          alt="Happy family protected by insurance"
           className="w-full h-full object-cover object-center opacity-40 mix-blend-luminosity scale-105 transition-transform duration-1000"
         />
         {/* Subtle Dark Navy Multi-stop Gradient */}
@@ -34,10 +34,10 @@ export default function Hero({
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-24 sm:pb-32">
         <div className="max-w-3xl">
-          {/* Badge */}
+          {/* Badge with OP LIFE SOLUTIONS */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0B666B]/30 border border-[#D9A441]/40 text-[#F2C96B] text-xs sm:text-sm font-semibold mb-6 backdrop-blur-sm shadow-sm">
             <Shield className="w-4 h-4 text-[#D9A441]" />
-            <span>OM PRAKASH SAHU INSURANCE SERVICES</span>
+            <span>OP LIFE SOLUTIONS</span>
           </div>
 
           {/* Main Headline */}

@@ -139,7 +139,7 @@ export async function POST(req: NextRequest) {
       year: "numeric",
     });
 
-    const defaultMessage = `Namaste ${policy.customer.name} ji, this is a reminder from Om Prakash Sahu Insurance Services regarding your ${policy.insuranceCompany} ${policy.policyType} Policy (#${policy.policyNumber}) expiring on ${expiryFormatted}. Please connect with us at +91 98261 45892 for timely renewal and un-interrupted protection.`;
+    const defaultMessage = `Namaste ${policy.customer.name} ji, this is a reminder from OP Life Solutions regarding your ${policy.insuranceCompany} ${policy.policyType} Policy (#${policy.policyNumber}) expiring on ${expiryFormatted}. Please connect with us at +91 62688 19299 for timely renewal and un-interrupted protection.`;
 
     const messageBody = customMessage?.trim() || defaultMessage;
     const recipient = channel === "EMAIL" ? policy.customer.email || policy.customer.mobile : policy.customer.mobile;

@@ -19,7 +19,7 @@ export default function TestimonialsSection() {
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg">
-            Hear from families and business owners across Chhattisgarh who trust Om Prakash Sahu Insurance Services for their protection.
+            Hear from families and business owners across Chhattisgarh who trust OP Life Solutions for their protection.
           </p>
         </div>
 

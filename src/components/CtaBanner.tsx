@@ -4,9 +4,9 @@ import React from "react";
 import { Phone, MessageSquare, ArrowRight, ShieldCheck } from "lucide-react";
 
 export default function CtaBanner() {
-  const waPhone = "919826145892";
+  const waPhone = "916268819299";
   const waText = encodeURIComponent(
-    "Namaste Om Prakash Sahu ji, I want to review my family's insurance coverage."
+    "Namaste Om Prakash Sahu ji (OP Life Solutions), I want to review my family's insurance coverage."
   );
 
   return (
@@ -26,7 +26,7 @@ export default function CtaBanner() {
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D9A441]/20 border border-[#D9A441]/50 text-[#F2C96B] text-xs font-bold uppercase tracking-wider mb-4">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>Your Protection. Our Priority.</span>
+                <span>SECURE TODAY | BRIGHTER TOMORROW</span>
               </div>
               <h3 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
                 Secure What Matters Most!
@@ -48,11 +48,11 @@ export default function CtaBanner() {
               </a>
 
               <a
-                href="tel:+919826145892"
+                href="tel:+916268819299"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#D9A441] to-[#F2C96B] hover:from-[#c28f30] hover:to-[#deb353] text-[#06223B] font-bold px-6 py-3.5 rounded-xl shadow-lg text-sm transition"
               >
                 <Phone className="w-4 h-4" />
-                <span>Call +91 98261 45892</span>
+                <span>Call +91 62688 19299</span>
               </a>
             </div>
           </div>

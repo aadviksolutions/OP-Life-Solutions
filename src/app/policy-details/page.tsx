@@ -7,8 +7,8 @@ import FaqSection from "@/components/FaqSection";
 import CtaBanner from "@/components/CtaBanner";
 
 export const metadata = {
-  title: "Check Policy Details | Om Prakash Sahu Insurance Services",
-  description: "Securely check your policy schedules, expiry dates, and download documents uploaded by Om Prakash Sahu Insurance Services.",
+  title: "Check Policy Details | OP LIFE SOLUTIONS",
+  description: "Securely check your policy schedules, expiry dates, and download documents uploaded by OP Life Solutions.",
 };
 
 export default function PolicyDetailsPage() {

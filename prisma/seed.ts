@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log("🌱 Seeding Om Prakash Sahu Insurance Services database...");
+  console.log("🌱 Seeding OP LIFE SOLUTIONS database...");
 
   // 1. Clean existing records for fresh seed
   await prisma.activityLog.deleteMany({});
@@ -22,12 +22,12 @@ async function main() {
   await prisma.adminSettings.create({
     data: {
       id: "default-settings",
-      companyName: "Om Prakash Sahu Insurance Services",
-      tagline: "YOUR PROTECTION. OUR PRIORITY.",
-      logoUrl: "/images/ops-logo.jpg",
-      phone: "+91 98261 45892",
-      whatsapp: "+91 98261 45892",
-      email: "contact@opsinsurance.in",
+      companyName: "OP LIFE SOLUTIONS",
+      tagline: "SECURE TODAY | BRIGHTER TOMORROW",
+      logoUrl: "/images/op-life-solutions-logo.jpg",
+      phone: "+91 62688 19299",
+      whatsapp: "+91 62688 19299",
+      email: "contact@oplifesolutions.in",
       address: "Shop No. 12, Commercial Complex, Pandri Market",
       city: "Raipur",
       state: "Chhattisgarh",
@@ -38,7 +38,7 @@ async function main() {
       yearsExperience: "15+",
       customersServed: "2500+",
       claimsSupportRate: "99.4%",
-      aboutStory: "With over 15 years of dedicated insurance advisory experience in Raipur and throughout Chhattisgarh, Om Prakash Sahu Insurance Services has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.",
+      aboutStory: "With over 15 years of dedicated insurance advisory experience in Raipur and throughout Chhattisgarh, OP Life Solutions, founded by Om Prakash Sahu, has protected thousands of families and businesses with customized coverage and steadfast claims advocacy.",
       reminderDaysJson: "[30, 15, 7, 1, 0]",
       smsEnabled: false,
       whatsappEnabled: false,
@@ -51,11 +51,11 @@ async function main() {
   const admin = await prisma.adminUser.create({
     data: {
       username: "admin",
-      email: "admin@opsinsurance.in",
+      email: "admin@oplifesolutions.in",
       passwordHash,
       name: "Om Prakash Sahu",
       role: "SUPER_ADMIN",
-      phone: "+91 98261 45892",
+      phone: "+91 62688 19299",
     },
   });
   console.log("✅ Super Admin created:", admin.username);
@@ -382,7 +382,7 @@ async function main() {
       customerId: cust1.id,
       channel: "WHATSAPP",
       recipient: "9826011223",
-      messageBody: "Dear Rajesh Verma ji, your Hyundai Creta Insurance (Pol #HDFC-MOT-889921) expires on " + addDays(5).toLocaleDateString("en-IN") + ". Kindly contact Om Prakash Sahu Insurance Services for seamless zero-dep renewal.",
+      messageBody: "Dear Rajesh Verma ji, your Hyundai Creta Insurance (Pol #HDFC-MOT-889921) expires on " + addDays(5).toLocaleDateString("en-IN") + ". Kindly contact OP Life Solutions for seamless zero-dep renewal.",
       status: "DELIVERED",
       sentAt: subDays(2),
     },
@@ -408,7 +408,7 @@ async function main() {
       customerId: cust2.id,
       channel: "SMS",
       recipient: "9425233445",
-      messageBody: "Namaste Sunita ji, your Star Health insurance renewal is due in 15 days. Call Om Prakash Sahu at +91 98261 45892 for cashless continuity.",
+      messageBody: "Namaste Sunita ji, your Star Health insurance renewal is due in 15 days. Call Om Prakash Sahu (OP Life Solutions) at +91 62688 19299 for cashless continuity.",
       status: "SENT",
       sentAt: subDays(1),
     },

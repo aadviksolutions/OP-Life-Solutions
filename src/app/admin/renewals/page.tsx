@@ -67,8 +67,8 @@ export default function RenewalsManagementPage() {
 
     const isExp = pol.daysRemaining < 0;
     const msg = isExp
-      ? `Namaste ${pol.customer.name} ji, this is an urgent reminder from Om Prakash Sahu Insurance Services. Your ${pol.insuranceCompany} ${pol.policyType} policy (#${pol.policyNumber}) expired on ${expDate}. Please contact us at +91 98261 45892 for immediate renewal and break-in avoidance.`
-      : `Namaste ${pol.customer.name} ji, reminder from Om Prakash Sahu Insurance Services regarding your ${pol.insuranceCompany} ${pol.policyType} policy (#${pol.policyNumber}) due for renewal on ${expDate} (in ${pol.daysRemaining} days). Kindly connect with us at +91 98261 45892 for seamless cashless renewal.`;
+      ? `Namaste ${pol.customer.name} ji, this is an urgent reminder from OP Life Solutions. Your ${pol.insuranceCompany} ${pol.policyType} policy (#${pol.policyNumber}) expired on ${expDate}. Please contact us at +91 62688 19299 for immediate renewal and break-in avoidance.`
+      : `Namaste ${pol.customer.name} ji, reminder from OP Life Solutions regarding your ${pol.insuranceCompany} ${pol.policyType} policy (#${pol.policyNumber}) due for renewal on ${expDate} (in ${pol.daysRemaining} days). Kindly connect with us at +91 62688 19299 for seamless cashless renewal.`;
 
     setCustomMsg(msg);
   };

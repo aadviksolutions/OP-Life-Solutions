@@ -10,9 +10,9 @@ interface TopBarProps {
 }
 
 export default function TopBar({
-  phone = "+91 98261 45892",
-  email = "contact@opsinsurance.in",
-  address = "Pandri Commercial Complex, Raipur, Chhattisgarh",
+  phone = "+91 62688 19299",
+  email = "contact@oplifesolutions.in",
+  address = "Commercial Complex, Pandri, Raipur, Chhattisgarh",
 }: TopBarProps) {
   const cleanPhone = phone.replace(/\D/g, "");
   const waPhone = cleanPhone.startsWith("91") ? cleanPhone : "91" + cleanPhone;
@@ -50,7 +50,7 @@ export default function TopBar({
           </a>
           <a
             href={`https://api.whatsapp.com/send?phone=${waPhone}&text=${encodeURIComponent(
-              "Namaste Om Prakash Sahu ji, I would like to inquire about insurance services."
+              "Namaste Om Prakash Sahu ji, I would like to inquire about insurance services with OP Life Solutions."
             )}`}
             target="_blank"
             rel="noopener noreferrer"
